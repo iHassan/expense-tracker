@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-regular.ttf');
+}
+
+
+body {
+
+      font-family: 'Raleway';
+      position: relative; 
+}
+
+/*========== Navigation ==========*/
+
+#navigation .navbar{
+    border: 0;
+    border-radius: 0;
+    background-color: #f8f8f8;
+}
+
+#navigation .container-fluid{
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+.navbar-left {
+    margin-left: 20px;
+}
+
+#navigation .navbar-brand {
+    float: left;
+    height: auto;
+    font-size: 0px; 
+    line-height: 0px; 
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar-alt .navbar-brand .logo {
+    margin-top: 25px;
+}
+
+#navigation .navbar-default .navbar-nav>li>a {
+    color: #333;
+    font-size: 15px;
+    font-weight: 700;
+    word-spacing: 5px;
+}
+
+#navigation .navbar-default .navbar-nav>li>a:hover {
+    color: #42c0fb;
+    background-color: transparent;
+}
+
+
+/*========== Navigation ==========*/
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 0px; 
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+/*========== Side Nav Section ==========*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #eee;
+    color: #42c0fb;
+}
+
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #fff;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #42c0fb;
+    background-color: #fff;
+}
+
+.nav-pills>li>a {
+    color: #fff;
+    font-size: 18px;
+}
+
+/*========== Side Nav Section ==========*/
+
+
+
+/*========== Add Expense Section ==========*/
+
+
+
+/*Add Expense Form Section*/
+
+
+.btn-info{
+    border-radius: 0px;
+    margin-top: 5px;
+    color: #fff;
+    background-color: #42c0fb;
+    border: none;
+    padding: 0px;
+    font-size: 14px;
+    padding: 10px 10px;
+    margin: 10px 16px;
+    font-weight: 700;
+}
+
+
+.form-control {
+    border: 1px solid #ccc;
+    /*border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;*/
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+.form-control:focus {
+    border-color: #42c0fb;
+    outline: 0;
+    box-shadow: none;
+    transition: color 0.5s ease;
+}
+
+
+
+/*Add Expense Form Section*/
+
+.card {
+    border-radius: 3px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.card .title {
+    margin: 0;
+    color: #333333;
+    font-weight: 300;
+}
+
+/*.card .category, .card label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9A9A9A;
+    margin-bottom: 0px;
+}
+*/
+.card .header {
+    padding: 10px 15px 0;
+}
+
+.header h3 {
+    font-size: 30px;
+    font-weight: 500;
+    word-spacing: 10px;
+    color: #42c0fb;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 500;
+    word-spacing: 10px;
+    color: #42c0fb;
+    margin: 0px;
+}
+
+
+.header p
+{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card .btn {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    margin-left: 15px;
+    color: #fff;
+    background-color: #42c0fb;
+    border: 0px;
+}
+
+
+@media (min-width: 992px)
+light-bootstrap…board.css:2807
+.table-responsive {
+    overflow: visible;
+}
+@media (min-width: 992px)
+light-bootstrap…board.css:2802
+.table-full-width {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+bootstrap.min.css:5
+.table-responsive {
+    min-height: .01%;
+    /* overflow-x: auto; */
+}
+
+.table > thead > tr > th {
+    border-bottom-width: 1px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+    padding-bottom: 5px;
+    background-color: #42c0fb;
+}
+
+
+.card .table tbody td:first-child, .card .table thead th:first-child {
+    padding-left: 15px;
+}
+
+
+
+
+/*========== Add Expense Section ==========*/
+
+
+
+
+/*========== User Section ==========*/
+
+
+/*.card label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}*/
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.card .content {
+    padding: 15px 15px 15px 15px;
+}
+
+.card-user .image {
+    height: 110px;
+}
+
+.card .image img {
+    width: 100%;
+}
+
+.card .image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+.card-user .content {
+    min-height: 240px;
+}
+
+.card-user .author {
+    text-align: center;
+    text-transform: none;
+    margin-top: -70px;
+}
+
+.card .author {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.avatar .border-gray {
+    border-color: #EEEEEE;
+}
+
+.card-user .avatar {
+    width: 124px;
+    height: 124px;
+    border: 5px solid #FFFFFF;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.card .avatar {
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.card-user .title {
+    line-height: 24px;
+}
+
+.card .title {
+    margin: 0;
+    color: #333333;
+    font-weight: 300;
+}
+
+.author a
+{
+    text-decoration: none;
+}
+
+.author .title {
+    font-size: 30px;
+    font-weight: 500;
+    word-spacing: 10px;
+    color: #42c0fb;
+    margin: 15px 0px;
+    line-height: 24px;
+}
+
+.title small{
+    text-transform: lowercase;
+}
+
+
+.card .user-description {
+    font-size: 14px;
+    color: #333;
+}
+/*========== User Section ==========*/
+
+
+
+
+/*========== Dashboard Section ==========*/
+
+.box{
+    padding: 20px 0;
+    margin: 10px 0px;
+    text-align: center;
+    color: #f3f3f3;
+    border-radius: 10px;
+}
+.first{
+     background: linear-gradient(to right, #eb3349, #f45c43);
+}
+.second{
+     background: linear-gradient(to right, #00d2ff, #3a7bd5);
+
+}
+.third{
+     background: linear-gradient(to right, #56ab2f, #a8e063);
+}
+.fourth{
+     background: linear-gradient(to right, #ffb75e, #ed8f03);
+}
+
+
+/*========== Dashboard Section ==========*/
+
+
+
+/*========== Dashboard DATE TIME Section ==========*/
+
+.front, .back {
+    border-radius:3px;
+}
+
+
+.front{
+  /*top: 0;
+  left: 0;*/
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.margin
+{
+    margin-top: 30px;
+}
+
+.back {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      margin-bottom: 13px;
+}
+
+/* ========== CLOCK ========== */
+
+.time * {
+      text-align:center;
+      text-transform:uppercase;
+  
+}
+#do-time {
+      display: block;
+      padding: 82px 0;
+      display: block;
+}
+.time h2 {
+    font-size:4em;
+    font-weight:400;
+    line-height:1;
+}
+.time h2 span {
+      font-weight:100;
+}
+.time h3 {
+      font-size:1.5em;
+      font-weight:100;
+      line-height:1;
+      margin-top:24px;
+}
+.time h3 span {
+      font-weight:400;
+      display:block;
+}
+.time small {
+      font-size:1em;
+      font-weight:300;
+}
+
+/* ========== END CLOCK ========== */
+
+/* ========== CALENDAR ========== */
+
+.calendar-wrapper {
+  font-weight:100;
+  padding: 46px 20px;
+  
+}
+.back tr.days {
+  padding-top:10px;
+}
+.back table {
+    clear: both;
+    width: 100%;
+    font-weight: 400;
+}
+.back td {
+  
+    padding: 4px;
+    text-align: center;
+    vertical-align: middle;
+}
+.back td.not-current {
+    color: #f3f3f3;
+}
+.back td.normal {}
+.back td.today {
+
+  font-size:1.5em;
+  color: #42c0fb;
+}
+.back thead td {
+  border:none;
+  color: #42c0fb;
+  text-transform:uppercase;
+  font-size:1.5em;
+}
+#btnPrev {
+   color: #42c0fb;
+  float:left;
+  margin-bottom:20px;
+  &:before {
+    content:'\f104';
+    font-family:FontAwesome;
+    padding-right:4px;
+  }
+}
+#btnNext {
+
+  color: #42c0fb;
+  float:right;
+  margin-bottom:20px;
+  &:after {
+    content:'\f105';
+    font-family:FontAwesome;
+    padding-left:4px;
+  }
+}
+#btnPrev, #btnNext {
+  background:transparent;
+  border:none;
+  outline:none;
+  font-size:12px;
+  font-weight:500;
+ /* font-family:"Roboto Slab", serif;
+  color:@quiet-color;*/
+  cursor:pointer;
+  text-transform:uppercase;
+  transition:all 0.3s ease;
+  &:hover {
+    /*color:@highlight-color;*/
+  }
+}
+
+/* ========== END CALENDAR ========== */
+
+
+
+
+/*========== Dashboard DATE TIME Section ==========*/
+
+
+
+#agenda-container {
+    
+    background: linear-gradient(to right, #00d2ff, #3a7bd5);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0px auto;
+    box-shadow: 1px 1px #00c8c5;
+    margin-top: 50px;
+}
+
+.agenda h1 {
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+.agenda p {
+    padding: 30px;
+    color: #eee;
+}
+
+#mainButton {
+    display: block;
+    width: 90%;
+    margin: 0px auto;
+    height: 40px;
+    background: #00c8c5;
+    transition: 500ms;
+    color: white;
+    font-weight: 900;
+    box-sizing: border-box;
+    border-radius: 0px;
+}
+#mainButton:hover {
+    background: #00a8c5;
+}
+
+.agenda { 
+   padding: 0px;
+}
+
+.agenda li {
+    display: block;
+    position: relative;
+  
+    width: 100%;
+    margin: 0px auto;
+    border: solid 1px #00c8c5;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 1px 1px #00a8c5;
+    transition: 400ms;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+    background: white;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+.call{
+    width: 97%;
+    padding: 0;
+    margin: 25px auto;
+}
+
+.agenda li:hover {
+    transform: scale(1.02);
+}
+
+.agenda input {
+    display: block;
+    width: 90%;
+    height: 60px;
+    margin: 5px auto;
+    box-sizing: border-box;
+    padding: 5px;
+    font-family: inherit;
+}
+
+.agenda button {
+    background: none;
+    border: solid 1px #00c8c5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 300ms;
+    font-size: 18px;     
+}
+
+
+.agenda button:hover {
+    background-color: #00c8c5;
+}
+
+.markImportant {
+    position: absolute;
+    bottom: 2px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.deleteButton {
+    position: absolute;
+    bottom: 2px;
+    right: 43px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.addDescription {
+    position: absolute;
+    bottom: 2px;
+    right: 80px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 14px;
+    text-align: left;
+    padding: 10px;
+    border: 1px dotted #eee;
+    margin: 6px 0;
+}
+
+.eventDescription {
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+
+/*========== Dashboard DATE TIME Section ==========*/
+
+
+

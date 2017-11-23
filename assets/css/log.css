@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-regular.ttf');
+}
+
+
+body {
+
+      font-family: 'Raleway';
+      position: relative; 
+      background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+  }
+
+/*========== Navigation ==========*/
+
+.navbar{
+	border: 0;
+	border-radius: 0;
+	background-color: #fff;
+}
+
+#navigation .container{
+	margin-top: 5px;
+}
+
+
+.navbar-left {
+    margin-left: 20px;
+}
+
+.navbar-brand {
+    float: left;
+    height: auto;
+   	font-size: 0px; 
+   	line-height: 0px; 
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar-alt .navbar-brand .logo {
+    margin-top: 25px;
+}
+
+.navbar-btn {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    color: #fff;
+    background-color: #42c0fb;
+    border: 0px;
+}
+
+/*========== Navigation ==========*/
+
+
+
+
+
+
+
+
+/*========== Form ==========*/
+#loginform h1 a{
+  color: #fff;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+
+#loginform .form-signin {
+  max-width: 420px;
+  padding: 30px 38px 66px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 0px;  
+  }
+
+#loginform .form-signin-heading{
+	color: #42c0fb;
+    font-size: 29px;
+    word-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+#loginform .form-control {
+    border-bottom: 1px solid #ccc;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+#loginform .form-control:focus {
+    border-color: #42c0fb;
+    outline: 0;
+    box-shadow: none;
+    transition: color 0.5s ease;
+}
+
+#loginform .margin{
+	margin-top: 50px;
+}
+
+#loginform .btn-submit{
+	padding: 6px 30px;
+    color: #fff;
+    background-color: #42c0fb;
+    border: 0px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+#loginform .btn-back
+{
+	padding: 4px 20px;
+    color: #fff;
+    background-color: #ff8b38;
+    border: 0px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+#loginform .forget-pass{
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 14px;
+}
+
+#loginform .forget-pass:hover{
+    color: #42c0fb;
+}
+
+#loginform .join-us {
+    display: block;
+    margin-top: 25px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#loginform .join-us b{
+    color: #42c0fb;
+    border: 1px solid #42c0fb;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+#loginform .join-us:hover b
+{
+   background-color: #42c0fb;
+   color: #fff;
+}
+
+
+  /*========== Form ==========*/
+
+
+
+  /*========== Modal ==========*/
+
+
+
+/* Full-width input fields */
+
+.modal-content h3{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #42c0fb;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.modal-content .form-control {
+    border-bottom: 1px solid #ccc;
+    box-shadow: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+}
+
+.modal-content .form-control:focus {
+    border-color: #42c0fb;
+    outline: 0;
+    box-shadow: none;
+    transition: color 0.5s ease;
+}
+
+.modal-content p{
+    font-size: 13px;
+    margin: 15px auto;
+}
+
+.modal-content p a{
+    font-size: 13px;
+    color: #42c0fb;
+}
+
+.modal-content .signupbtn{
+    padding: 6px 30px;
+    color: #fff;
+    background-color: #42c0fb;
+    border: 0px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: 20px;
+
+}
+
+.modal-content .cancelbtn{
+    padding: 4px 20px;
+    color: #fff;
+    background-color: #ff8b38;
+    border: 0px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    max-width: 440px;
+    padding: 20px 38px 66px;
+    margin: 147px auto;
+    background-color: #fff;
+    border: 0px;
+    border-radius: 0;
+
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.clearfix{
+    margin-top: 10px;
+}
+
+.clearfix .face {
+    color: #3b5998;
+    background-color: #fff;
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 1px solid #3b5998;
+}
+
+.clearfix .face:hover {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.clearfix .g-mail {
+    color: #ea4335;
+    background-color: #fff;
+    padding: 8px 7px;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 1px solid #ea4335;
+}
+
+
+.clearfix .g-mail:hover {
+    background-color: #ea4335;
+    color: #fff;
+}
+
+.clearfix p{
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+  /*========== Modal ==========*/
+  
