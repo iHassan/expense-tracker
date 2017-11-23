@@ -10,6 +10,8 @@ application/logs/*
 
 composer.lock
 
+application/config/development/
+
 ##ignore shortcut
 Open-In-Sublime.exe
 
