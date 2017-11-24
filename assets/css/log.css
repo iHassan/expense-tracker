@@ -68,6 +68,11 @@ body {
   text-decoration: none;
 }
 
+div#infoMessage {
+    float: left;
+    color: red;
+    text-align: left;
+}
 
 #loginform .form-signin {
   max-width: 420px;
