@@ -6,6 +6,7 @@ class Dashboard extends CI_Controller
 
     public function __construct()
     {
+
         parent::__construct();
         $this->load->database();
         $this->load->library(array('ion_auth', 'form_validation'));
@@ -17,6 +18,7 @@ class Dashboard extends CI_Controller
         {
             redirect('app/login', 'refresh');
         }
+        
     }
 
     public function index()
