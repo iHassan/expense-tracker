@@ -62,4 +62,10 @@ $route['app/sign-up'] = 'User_Signup/create_user';
 $route['app/login'] = 'User_Login/login';
 $route['login'] = 'User_Login/login';
 $route['sign-up'] = 'User_Signup/create_user';
+$route['app/signup-thankyou'] = 'User_Signup/show_activation_msg';
+$route['app/activate'] = 'User_Signup/activate';
+$route['app/activate/(:any)/(:any)'] = 'User_Signup/activate/$1/$1';
+$route['app/activation-success'] = 'User_Signup/show_activation_success_msg';
 $route['app/dashboard'] = 'Dashboard/index';
+$route['app/logout'] = 'User_Login/logout';
+
