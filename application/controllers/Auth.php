@@ -379,7 +379,8 @@ class Auth extends CI_Controller
 		{
 			// redirect them to the auth page
 			$this->session->set_flashdata('message', $this->ion_auth->messages());
-			redirect("auth", 'refresh');
+			//redirect("auth", 'refresh');
+			redirect("app/activation-success", 'refresh');
 		}
 		else
 		{
