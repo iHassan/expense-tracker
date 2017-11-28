@@ -69,3 +69,6 @@ $route['app/activation-success'] = 'User_Signup/show_activation_success_msg';
 $route['app/dashboard'] = 'Dashboard/index';
 $route['app/logout'] = 'User_Login/logout';
 
+$route['app/edit-profile'] = 'Edit_User_Profile/index';
+$route['app/add-income'] = 'Expense_controller/add_income';
+
