@@ -34,6 +34,9 @@
         <script src="<?php echo ASSETS_URL ?>js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+        <script src="<?php echo ASSETS_URL ?>js/pace.min.js"></script>
+        <link href="<?php echo ASSETS_URL ?>css/pace-theme-minimal.css" rel="stylesheet" />
+
 
 </head>
 
@@ -122,55 +125,6 @@
 
 
 
-
- <!-- ======================================
-       Modal Form
-===========================================-->
-
-<div id="id01" class="modal">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-
-          <form class="modal-content animate" action="">
-                    <h3>Sign Up</h3>
-                    <div class="form-group float-label-control">
-                        <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" />
-                     </div>
-
-
-                      <div class="form-group float-label-control">
-                      <input type="text" class="form-control" placeholder="Enter Email" name="email" required="" autofocus="" />
-                      </div>
-
-                      <div class="form-group float-label-control">
-                      <input type="password" class="form-control" placeholder="Enter Password" name="psw" required="" autofocus="" />
-                      </div>
-
-                      <div class="form-group float-label-control">
-                      <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" required="" autofocus="" />
-                       </div>
-
-                      
-                      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-
-                      <div class="clearfix">
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                        <button type="submit" class="signupbtn">Sign up</button>
-                      </div>
-                      <div class="clearfix">
-                        <p>Continue with</p>
-                      <a href="#" class="face"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                      <a href="#" class="g-mail"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                      </div>
-          </form>
-</div>
-
-
-
-<!-- ======================================
-       Modal Form
-===========================================-->
-
-
         <script src="<?php echo ASSETS_URL ?>js/plugins.js"></script>
         <script src="<?php echo ASSETS_URL ?>js/main.js"></script>
 
@@ -247,21 +201,6 @@
     };
   </script>
 
-
-<!-- ========== Modal ========== -->
-
-
-        <script type="text/javascript">
-            // Get the modal
-            var modal = document.getElementById('id01');
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
 
        </body>
 </html>
