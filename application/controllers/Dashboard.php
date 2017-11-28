@@ -23,7 +23,13 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
-        echo "welcome to app dashboard";
+        if ($this->input->is_ajax_request()) {
+            $data[]='';
+            $this->load->view('app/dashboard', $data);
+        } else {
+            $data['main_content'] = 'app/dashboard';
+            $this->load->view('app/includes/template', $data);
+        }
     }
 
 }
