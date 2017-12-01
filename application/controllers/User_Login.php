@@ -13,7 +13,7 @@ class User_Login extends CI_Controller
 
         $this->lang->load('auth');
 
-        if ($this->ion_auth->logged_in())
+        if ($this->ion_auth->logged_in() && $this->uri->segment(2)!='logout')
         {
             redirect('app/dashboard', 'refresh');
         }
@@ -94,6 +94,21 @@ class User_Login extends CI_Controller
         {
             return $view_html;
         }
+    }
+
+    /**
+     * Log the user out
+     */
+    public function logout()
+    {
+        $this->data['title'] = "Logout";
+
+        // log the user out
+        $logout = $this->ion_auth->logout();
+
+        // redirect them to the login page
+        $this->session->set_flashdata('message', $this->ion_auth->messages());
+        redirect('app/login', 'refresh');
     }
 
 }

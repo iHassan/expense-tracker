@@ -34,9 +34,6 @@
         <script src="<?php echo ASSETS_URL ?>js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <script src="<?php echo ASSETS_URL ?>js/pace.min.js"></script>
-        <link href="<?php echo ASSETS_URL ?>css/pace-theme-minimal.css" rel="stylesheet" />
-
 
 </head>
 
@@ -70,10 +67,6 @@
 
 
 
- <!-- ======================================
-       Login Form
-===========================================-->
-
 
     <div id="loginform">
         <div class="container">
@@ -87,41 +80,20 @@
                     </h1>
 
 
+                    <div class="form-signin animated zoomIn">
+                      <h3>Thank You For Registering.</h3>
+                      <br>
+                      <p>An email has been sent to your email address with the instructions to activate your account.</p>
+                    </div>
 
-                    <?php echo form_open("app/login",array('class' => 'form-signin animated zoomIn', 'method' => 'post'));?>
-                    <!--< form action="" method="post" name="Login_Form" class="form-signin animated zoomIn">  -->
-                        <h3 class="form-signin-heading">Sign In</h3>
-                          
-                          <div id="infoMessage"><?php echo $message;?></div>
-                          <!-- ====== First Name====== -->
-
-                          <div class="form-group float-label-control">
-                            <?php echo form_input($identity);?>
-                          <!-- <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" /> -->
-                          </div>
-
-                          <!-- ====== First Name ====== -->
-
-                          <div class="form-group float-label-control">
-                            <?php echo form_input($password);?>
-                            <!-- <input type="password" class="form-control" name="Password" placeholder="Password" required=""/ >  --> 
-                          </div>   
-                           
-                            <a href="#" class="forget-pass">Forget the Password ?</a>
-
-                            <a href="<?php echo BASE_URL ?>" class="btn-back"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go back</a>    
-                          <button class="btn-submit"  name="Submit" value="Login" type="Submit">Sign In</button>
-
-                            <a href="#" class="join-us">Not a member? <a href="<?php echo BASE_URL.'app/sign-up' ?>"><b>Sign Up</b></a></a>
-                     <?php echo form_close();?>         
             </div>
         </div>
     </div>
 </div>
 
- <!-- ======================================
-       Login Form
-===========================================-->
+
+
+
 
 
 
@@ -200,7 +172,6 @@
         document.body.appendChild(css);
     };
   </script>
-
 
        </body>
 </html>

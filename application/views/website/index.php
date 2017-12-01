@@ -86,7 +86,7 @@
             <div class="col-md-6 padding">
                 <h2 class="animatable slideInLeft">Online <b>Expense</b> Tracker</h2>
                 <p class="animatable slideInLeft">Easily Manage Your Expenses</p>
-                <a href="E:/Sublime/theexpense/login.html">Try Now</a>
+                <a href="<?php echo BASE_URL ?>app/sign-up">Try Now</a>
             </div>
         </div>
     </div>
@@ -143,7 +143,7 @@
                 <h3>Manage Your Expenses</h3>
                 <h6>Get Clear Overview on your expense</h6>
                 <p>View reports every week to examine your expenses. Make adjustments as needed, especially when you notice that you are spending more than your budget allocations. </p>
-                <a href="E:/Sublime/theexpense/login.html">Start Now</a>
+                <a href="<?php echo BASE_URL ?>app/sign-up"">Start Now</a>
             </div>
         </div>
     </div>
@@ -297,7 +297,7 @@
             <div class="col-md-12 text-center">
                 <h3>Let's Get Started</h3>
                 <p>Sign up For TheExpense</p>
-                <a href="#" class="animatable slideInDown">SIGNUP</a>
+                <a href="<?php echo BASE_URL ?>app/sign-up"" class="animatable slideInDown">SIGNUP</a>
             </div>
         </div>
     </div>
@@ -330,11 +330,11 @@
                 <h4>Menu —</h4>
                 <div class="col-md-6">
                     <ul class="pages">
-                        <li><a href="#">Manage</a></li>
-                        <li><a href="#">Control</a></li>
-                        <li><a href="#">Overview</a></li>
-                        <li><a href="#">Report</a></li>
-                        <li><a href="#">Get Alerts</a></li>
+                        <li><a href="javascript:void(0)">Manage</a></li>
+                        <li><a href="javascript:void(0)">Control</a></li>
+                        <li><a href="javascript:void(0)">Overview</a></li>
+                        <li><a href="javascript:void(0)">Report</a></li>
+                        <li><a href="javascript:void(0)">Get Alerts</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6">
@@ -349,10 +349,10 @@
             <div class="col-md-4 footer-social animatable slideInRight">
                 <h4>Follow Us</h4>
                 <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">RSS</a></li>
+                    <li><a href="javascript:void(0)">Facebook</a></li>
+                    <li><a href="javascript:void(0)">Twitter</a></li>
+                    <li><a href="javascript:void(0)">Instagram</a></li>
+                    <li><a href="javascript:void(0)">RSS</a></li>
                 </ul>
             </div>
       

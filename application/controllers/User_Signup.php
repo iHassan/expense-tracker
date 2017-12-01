@@ -75,7 +75,7 @@ class User_Signup extends CI_Controller
             // check to see if we are creating the user
             // redirect them back to the admin page
             $this->session->set_flashdata('message', $this->ion_auth->messages());
-            redirect("app/dashboard", 'refresh');
+            redirect("app/signup-thankyou", 'refresh');
         }
         else
         {
@@ -171,6 +171,63 @@ class User_Signup extends CI_Controller
         {
             return $view_html;
         }
+    }
+
+    /**
+     * Activate the user
+     *
+     * @param int         $id   The user ID
+     * @param string|bool $code The activation code
+     */
+    public function activate($id, $code = FALSE)
+    {
+        if ($code !== FALSE)
+        {
+            $activation = $this->ion_auth->activate($id, $code);
+        }
+        else if ($this->ion_auth->is_admin())
+        {
+            $activation = $this->ion_auth->activate($id);
+        }
+
+        if ($activation)
+        {
+            // redirect them to the auth page
+            $this->session->set_flashdata('message', $this->ion_auth->messages());
+            redirect("app/activation-success", 'refresh');
+        }
+        else
+        {
+            // redirect them to the forgot password page
+            $this->session->set_flashdata('message', $this->ion_auth->errors());
+            redirect("auth/forgot_password", 'refresh');
+        }
+    }
+
+    /**
+     * Show activation message to signed up user
+     */
+    public function show_activation_msg()
+    {
+        if ($this->ion_auth->logged_in())
+        {
+            redirect('app/dashboard', 'refresh');
+        }
+
+        $this->load->view('app/signup_thankyou');
+    }
+
+    /**
+     * Show activation success message to signed up user
+     */
+    public function show_activation_success_msg()
+    {
+        if ($this->ion_auth->logged_in())
+        {
+            redirect('app/dashboard', 'refresh');
+        }
+
+        $this->load->view('app/activation_thankyou');
     }
 
 }
