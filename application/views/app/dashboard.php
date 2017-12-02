@@ -17,7 +17,7 @@ Main Dashboard
       <p>Rs.</p>
     </div>
     <div class="col-md-3 box fourth">
-      <h4>Remainig</h4>
+      <h4>Remaining</h4>
       <p>Rs.</p>
     </div>
   </div>
