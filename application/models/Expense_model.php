@@ -54,4 +54,50 @@ class Expense_model extends CI_Model
         return false;
     }
 
+    /**
+     * get all categories
+     * @param  [int] $user_id [logged in user id]
+     * @return [mixed] object | false
+     */
+    public function get_categories()
+    {
+        $query = $this->db->select('category_id, category_name')
+                ->get('category');
+
+        if ($query->num_rows() >= 1) { // record found
+            return $query->result_object();
+        }
+        return false;
+    }
+
+    /**
+     * insert user expense
+     * @param  [int] $user_id [logged in user id]
+     * @param  array $user_data [user data to be saved]
+     * @return [bool] true | false
+     */
+    public function insert_expense($user_id, $user_data)
+    {
+        $q = $this->db->insert('user_expense', $user_data);
+        return ($q) ? true : false;
+    }
+
+    /**
+     * get user income record by id
+     * @param  [int] $user_id [logged in user id]
+     * @return [mixed] object | false
+     */
+    public function get_user_expenses($user_id)
+    {
+        $query = $this->db->select('ue.*,c.category_name')
+                ->join('category c', 'c.category_id = ue.category_id', 'left')
+                ->where('ue.user_id', $user_id)
+                ->get('user_expense ue');
+
+        if ($query->num_rows() >= 1) { // record found
+            return $query->result_object();
+        }
+        return false;
+    }
+
 }
