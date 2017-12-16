@@ -48,7 +48,7 @@ class Expense_model extends CI_Model
                 ->limit(1)
                 ->get('user_income');
 
-        if ($query->num_rows() == 1) { // record found
+        if ($query && $query->num_rows() == 1) { // record found
             return $query->row();
         }
         return false;
@@ -83,7 +83,7 @@ class Expense_model extends CI_Model
     }
 
     /**
-     * get user income record by id
+     * get user all expenses record
      * @param  [int] $user_id [logged in user id]
      * @return [mixed] object | false
      */
@@ -96,6 +96,44 @@ class Expense_model extends CI_Model
 
         if ($query->num_rows() >= 1) { // record found
             return $query->result_object();
+        }
+        return false;
+    }
+
+    /**
+     * get user expense record by id
+     * @param  [int] $expense_id [user expense id]
+     * @param  [int] $user_id [logged in user id]
+     * @return [mixed] object_row | false
+     */
+    public function get_expense_by_id($expense_id, $user_id)
+    {
+        $query = $this->db->select('ue.*,c.category_name')
+                ->join('category c', 'c.category_id = ue.category_id', 'left')
+                ->where('ue.user_id', $user_id)
+                ->where('ue.expense_id', $expense_id)
+                ->get('user_expense ue');
+
+        if ($query->num_rows() == 1) { // record found
+            return $query->row();
+        }
+        return false;
+    }
+
+     /**
+     * update user expense 
+     * @param  int $expense_id   [user expense id]
+     * @param  int $user_id   [logged in user id]
+     * @param  array $user_data [user data to be updated]
+     * @return bool  true/false
+     */
+    public function update_expense($expense_id, $user_id, $user_data)
+    {
+        $query = $this->db->where('user_id', $user_id)
+                    ->where('expense_id', $expense_id)
+                    ->update('user_expense', $user_data);
+        if ($query) { // record updated
+            return true;
         }
         return false;
     }

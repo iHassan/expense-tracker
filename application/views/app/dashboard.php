@@ -56,9 +56,9 @@ Main Dashboard
               </h4>
             </a>
           </div>
-          <p class="user-description text-center"> "Lamborghini Mercy <br>
-            Your chick she so thirsty <br>
-            I'm in that two seat Lambo"
+          <p class="user-description text-center"> "Lorem Ipsum dummy text <br>
+            Lorem Ipsum dummy text <br>
+            Lorem Ipsum dummy"
           </p>
         </div>
         
