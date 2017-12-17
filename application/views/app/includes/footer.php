@@ -55,7 +55,7 @@
               document.getElementById('btnPrev').onclick = function() {
                 c.previousMonth();
               };
-              getId("do-time").innerHTML = formatTime();
+              document.getElementById("do-time").innerHTML = formatTime();
             } else {
               $('.admin-content').append('<p style="display:none;" id="do-time"></p>');
             }
@@ -85,7 +85,7 @@
           document.getElementById('btnPrev').onclick = function() {
             c.previousMonth();
           };
-          getId("do-time").innerHTML = formatTime();
+          document.getElementById("do-time").innerHTML = formatTime();
         } else {
             $('.admin-content').append('<p style="display:none;" id="do-time"></p>');
         }
