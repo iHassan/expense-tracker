@@ -1,8 +1,9 @@
-getId("do-time").innerHTML = formatTime();
-var setTime = setInterval(function(){
+if ((/dashboard/.test(self.location.href))) {
   getId("do-time").innerHTML = formatTime();
-},60000);
-
+  var setTime = setInterval(function(){
+    getId("do-time").innerHTML = formatTime();
+  },60000);
+}
 function formatTime() {
 
   var d = new Date(),

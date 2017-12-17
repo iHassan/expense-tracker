@@ -78,11 +78,9 @@
                     <li><a href="<?php echo BASE_URL.'app/edit-profile' ?>" data-target-id="user"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
                     <li><a href="<?php echo BASE_URL.'app/add-income' ?>" data-target-id="user"><i class="fa fa-file-o fa-fw"></i> Add Income</a></li>
                     <li><a href="<?php echo BASE_URL.'app/new-expense' ?>" data-target-id="user"><i class="fa fa-list-alt fa-fw"></i> New Expense</a></li>
-                    <li><a href="<?php echo BASE_URL.'app/expense-overview' ?>" data-target-id="user"><i class="fa fa-list-alt fa-fw"></i> Expense Overview</a></li>
-                    <li><a href="javascript:void(0)" data-target-id="user"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a></li>
-                    <li><a href="javascript:void(0)" data-target-id="user"><i class="fa fa-table fa-fw"></i> Tables</a></li>
-                    <li><a href="javascript:void(0)" data-target-id="user"><i class="fa fa-calendar fa-fw"></i> Calender</a></li>
-                    <li><a href="javascript:void(0)" data-target-id="user"><i class="fa fa-check fa-fw"></i>Create Report</a></li>
+                    <li><a href="<?php echo BASE_URL.'app/expense-overview' ?>" data-target-id="user"><i class="fa fa-table fa-fw"></i> Expense Overview</a></li>
+                    <li><a href="<?php echo BASE_URL.'app/add-budget' ?>" data-target-id="user"><i class="fa fa-check fa-fw"></i>Create Budget</a></li>
+                    <li><a href="javascript:void(0)" data-target-id="user"><i class="fa fa-bar-chart-o fa-fw"></i> Search Expense</a></li>
                   </ul>
                 </div>
                 <div id="main">

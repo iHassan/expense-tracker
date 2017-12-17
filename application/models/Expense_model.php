@@ -56,7 +56,6 @@ class Expense_model extends CI_Model
 
     /**
      * get all categories
-     * @param  [int] $user_id [logged in user id]
      * @return [mixed] object | false
      */
     public function get_categories()
