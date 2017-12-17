@@ -139,7 +139,7 @@ class Expense_controller extends CI_Controller
                     if ($insert) {
                         $data['success_message'] = 'Expense Added Succesfully';
                     } else {
-                        $data['success_message'] = 'Sorry there was an error. Please try again';
+                        $data['error_message'] = 'Sorry there was an error. Please try again';
                     }
                     
                     
@@ -169,62 +169,83 @@ class Expense_controller extends CI_Controller
 
         if ( $this->input->is_ajax_request() ) { // user is requesting page from left navigation
             $this->load->view('app/expense_overview', $data);
-        } else {
-
-            if ( $this->input->post('submitBtn') ) { // form is submitted
-
-                $this->form_validation->set_rules('amount', 'Amount', 'trim|required|is_natural_no_zero|integer|min_length[3]|max_length[11]');
-                $this->form_validation->set_rules('expense_date', 'Date', 'trim|required');
-                $this->form_validation->set_rules('description', 'Description', 'trim');
-                $this->form_validation->set_rules('category', 'Category', 'trim|required');
-
-                if ($this->form_validation->run() == FALSE) { //invalid/missing values in one or more input fields
-                    
-                    $data['error_message'] = validation_errors();
-                    $data['main_content'] = 'app/expense_overview';
-                    $this->load->view('app/includes/template', $data);
-                            
-                } else { // insert user's expense
-                        
-                    $amount       = trim(strip_tags(htmlentities($this->input->post('amount'))));
-                    $expense_date = trim(strip_tags(htmlentities($this->input->post('expense_date'))));
-                    $description  = trim(strip_tags(htmlentities($this->input->post('description'))));
-                    $category     = trim(strip_tags(htmlentities($this->input->post('category'))));
-                    $user_id      = $this->ion_auth->get_user_id();
-                    
-                    $expense_date = strtotime($expense_date)? $expense_date : date('Y-m-d');
-                    
-                    $user_data = array(
-                        'user_id'      => $user_id,
-                        'amount'       => $amount,
-                        'description'  => $description,
-                        'category_id'  => $category,
-                        'expense_date' => $expense_date,
-                        'created_date' => date('Y-m-d H:i:S')
-                        );
-
-                    $insert = $this->Expense_model->insert_expense($user_id,$user_data);
-                    
-                    if ($insert) {
-                        $data['success_message'] = 'Expense Added Succesfully';
-                    } else {
-                        $data['success_message'] = 'Sorry there was an error. Please try again';
-                    }
-                    
-                    
-                    $data['main_content'] = 'app/expense_overview';
-                    $this->load->view('app/includes/template', $data);
-
-                }
-
-            } else { // user is accessing page directly from url
-                
-                $data['main_content'] = 'app/expense_overview';
-                $this->load->view('app/includes/template', $data);
-            
-            }
+        } else { // user is accessing page directly from url 
+              
+            $data['main_content'] = 'app/expense_overview';
+            $this->load->view('app/includes/template', $data);          
             
         }
+    }
+
+    /**
+     * edit user expense
+     * @return view
+     */
+    public function edit_expense()
+    {
+
+        if (!$this->uri->segment(3)) {
+            redirect('app/expense-overview', 'refresh');
+            exit;
+        }
+     
+        $data['categories']=$this->Expense_model->get_categories();
+
+        if ( $this->input->post('submitBtn') ) { // form is submitted
+
+            $this->form_validation->set_rules('amount', 'Amount', 'trim|required|is_natural_no_zero|integer|min_length[3]|max_length[11]');
+            $this->form_validation->set_rules('expense_date', 'Date', 'trim|required');
+            $this->form_validation->set_rules('description', 'Description', 'trim');
+            $this->form_validation->set_rules('category', 'Category', 'trim|required');
+
+            if ($this->form_validation->run() == FALSE) { //invalid/missing values in one or more input fields
+                $data['result']=$this->Expense_model->get_expense_by_id($this->uri->segment(3),$this->ion_auth->get_user_id());
+                $data['error_message'] = validation_errors();
+                $data['main_content'] = 'app/edit_expense';
+                $this->load->view('app/includes/template', $data);
+                        
+            } else { // insert user's expense
+                    
+                $amount       = trim(strip_tags(htmlentities($this->input->post('amount'))));
+                $expense_date = trim(strip_tags(htmlentities($this->input->post('expense_date'))));
+                $description  = trim(strip_tags(htmlentities($this->input->post('description'))));
+                $category     = trim(strip_tags(htmlentities($this->input->post('category'))));
+                $user_id      = $this->ion_auth->get_user_id();
+                
+                $expense_date = strtotime($expense_date)? $expense_date : date('Y-m-d');
+                
+                $user_data = array(
+                    'amount'       => $amount,
+                    'description'  => $description,
+                    'category_id'  => $category,
+                    'expense_date' => $expense_date
+                    );
+
+                $update = $this->Expense_model->update_expense($this->uri->segment(3),$user_id,$user_data);
+                $data['result']=$this->Expense_model->get_expense_by_id($this->uri->segment(3),$this->ion_auth->get_user_id());
+
+                if ($update) {
+
+                    $this->session->set_flashdata('success_message','Expense Updated Succesfully');
+                    redirect("app/edit-expense/{$this->uri->segment(3)}",'refresh');
+                    exit;
+                } else {
+
+                    $this->session->set_flashdata('error_message','Sorry there was an error. Please try again');
+                    redirect("app/edit-expense/{$this->uri->segment(3)}",'refresh');
+                    exit;
+                }
+                            
+            }
+
+        } else { // user is accessing page directly from url
+            
+            $data['result']=$this->Expense_model->get_expense_by_id($this->uri->segment(3),$this->ion_auth->get_user_id());
+            $data['main_content'] = 'app/edit_expense';
+            $this->load->view('app/includes/template', $data);
+        
+        }          
+    
     }
 
 }

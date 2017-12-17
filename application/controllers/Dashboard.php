@@ -9,6 +9,7 @@ class Dashboard extends CI_Controller
 
         parent::__construct();
         $this->load->database();
+        $this->load->model('Dashboard_Model');
         $this->load->library(array('ion_auth', 'form_validation'));
         $this->load->helper(array('url', 'language'));
 
@@ -23,6 +24,11 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
+
+        $data['t_i']=$this->Dashboard_Model->total_income($this->ion_auth->get_user_id());
+        $data['t_s']=$this->Dashboard_Model->total_spent($this->ion_auth->get_user_id());
+        $data['user']=$this->Dashboard_Model->get_user($this->ion_auth->get_user_id());
+
         if ($this->input->is_ajax_request()) {
             $data[]='';
             $this->load->view('app/dashboard', $data);

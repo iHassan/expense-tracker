@@ -73,4 +73,5 @@ $route['app/edit-profile'] = 'Edit_User_Profile/index';
 $route['app/add-income'] = 'Expense_controller/add_income';
 $route['app/new-expense'] = 'Expense_controller/new_expense';
 $route['app/expense-overview'] = 'Expense_controller/expense_overview';
+$route['app/edit-expense/(:num)'] = 'Expense_controller/edit_expense/$1';
 

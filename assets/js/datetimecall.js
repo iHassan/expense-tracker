@@ -1,6 +1,7 @@
-setInterval(function(){
+getId("do-time").innerHTML = formatTime();
+var setTime = setInterval(function(){
   getId("do-time").innerHTML = formatTime();
-},1000);
+},60000);
 
 function formatTime() {
 

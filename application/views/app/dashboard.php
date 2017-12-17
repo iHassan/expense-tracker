@@ -1,24 +1,42 @@
-<!-- ======================================
-Main Dashboard
-===========================================-->
+
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3 box first">
-      <h4>Total Expense</h4>
-      <p>Rs.</p>
+      <h4>Total Income</h4>
+      <p>Rs. <?php echo ($t_i)?$t_i->income+$t_i->bonus+$t_i->additional_allowance:'N/A' ?></p>
     </div>
-    <div class="col-md-3 box second">
+    <!-- <div class="col-md-3 box second">
       <h4>Total Income</h4>
       <p>Rs.</p>
+    </div> -->
+    <div class="col-md-1">
     </div>
     <div class="col-md-3 box third">
       <h4>Spent</h4>
-      <p>Rs.</p>
+      <p>Rs. <?php echo ($t_s)?$t_s:'N/A' ?></p>
+    </div>
+    <div class="col-md-1">
     </div>
     <div class="col-md-3 box fourth">
       <h4>Remaining</h4>
-      <p>Rs.</p>
+      <p>Rs. 
+        <?php
+        if ($t_i) {
+          $income=$t_i->income+$t_i->bonus+$t_i->additional_allowance;
+          if (!$t_s) {
+            echo $income;
+          } else {
+            echo (($income-$t_s)>0?$income-$t_s:'0');
+          }
+        } else {
+          echo "N/A";
+        }
+        
+        ?>
+      </p>
+    </div>
+    <div class="col-md-1">
     </div>
   </div>
   <div class="row margin">
@@ -51,14 +69,13 @@ Main Dashboard
           <div class="author">
             <a href="#">
               <img class="avatar border-gray" src="<?php echo ASSETS_URL ?>images/face-1.jpg" alt="...">
-              <h4 class="title">Mike Andrew<br>
-              <small>michael24</small>
+              <h4 class="title"><?php echo ($user)?"{$user->first_name} {$user->last_name}":'N/A' ?><br>
+              <small><?php echo ($user)?$user->email:'N/A' ?></small>
               </h4>
             </a>
           </div>
-          <p class="user-description text-center"> "Lamborghini Mercy <br>
-            Your chick she so thirsty <br>
-            I'm in that two seat Lambo"
+          <p class="user-description text-center">
+            <?php echo ($user)?$user->company:'' ?>
           </p>
         </div>
         
@@ -84,7 +101,3 @@ Main Dashboard
   </div>
 </div>
 </div>
-
-<!-- ======================================
-Main Dashboard
-===========================================-->
