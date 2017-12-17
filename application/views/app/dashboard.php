@@ -82,7 +82,7 @@
       </div>
     </div>
   </div>
-  <div class="row margin">
+  <!-- <div class="row margin">
     <div class="col-md-12 text-center">
       <div id="agenda-container" class="agenda">
         <h1>My Expense Agenda</h1>
@@ -99,5 +99,5 @@
   <div class="col-md-12 text-center">
     Event Calender
   </div>
-</div>
+</div> -->
 </div>
