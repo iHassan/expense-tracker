@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="<?php echo ASSETS_URL ?>css/main.css">
     <link rel="stylesheet" href="<?php echo ASSETS_URL ?>css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo ASSETS_URL ?>css/log.css">
+    <!-- <link rel="stylesheet" href="<?php echo ASSETS_URL ?>css/log.css"> -->
     <link href="<?php echo ASSETS_URL ?>css/animate.css" rel="stylesheet"/>
     <link href="<?php echo ASSETS_URL ?>css/waypoints.css" rel="stylesheet"/>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
