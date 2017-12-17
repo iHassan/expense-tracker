@@ -80,7 +80,7 @@
                     <li><a href="<?php echo BASE_URL.'app/new-expense' ?>" data-target-id="user"><i class="fa fa-list-alt fa-fw"></i> New Expense</a></li>
                     <li><a href="<?php echo BASE_URL.'app/expense-overview' ?>" data-target-id="user"><i class="fa fa-table fa-fw"></i> Expense Overview</a></li>
                     <li><a href="<?php echo BASE_URL.'app/add-budget' ?>" data-target-id="user"><i class="fa fa-check fa-fw"></i>Create Budget</a></li>
-                    <li><a href="javascript:void(0)" data-target-id="user"><i class="fa fa-bar-chart-o fa-fw"></i> Search Expense</a></li>
+                    <!-- <li><a href="javascript:void(0)" data-target-id="user"><i class="fa fa-bar-chart-o fa-fw"></i> Search Expense</a></li> -->
                   </ul>
                 </div>
                 <div id="main">
