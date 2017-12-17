@@ -12,6 +12,7 @@
 <!-- ========== Side Bar.JS ========== -->
 <script src="<?php echo ASSETS_URL ?>js/sidebar.js" type="text/javascript"></script>
 
+
 <!-- ========== Nav Menu Hide Show ========== -->
 <script type="text/javascript">
   $(document).ready(function(){
