@@ -80,6 +80,7 @@ div#infoMessage {
   margin: 0 auto;
   background-color: #fff;
   border: 0px;  
+  margin-bottom: 36px;
   }
 
 #loginform .form-signin-heading{
