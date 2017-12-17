@@ -49,29 +49,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'website';
-$route['404_override'] = '';
+$route['default_controller']   = 'website';
+$route['404_override']         = '';
 $route['translate_uri_dashes'] = FALSE;
 
 /**
  * login/register routes
  */
 
-$route['app/login'] = '';
-$route['app/sign-up'] = 'User_Signup/create_user';
-$route['app/login'] = 'User_Login/login';
-$route['login'] = 'User_Login/login';
-$route['sign-up'] = 'User_Signup/create_user';
-$route['app/signup-thankyou'] = 'User_Signup/show_activation_msg';
-$route['app/activate'] = 'User_Signup/activate';
+$route['app/login']                  = '';
+$route['app/sign-up']                = 'User_Signup/create_user';
+$route['app/login']                  = 'User_Login/login';
+$route['login']                      = 'User_Login/login';
+$route['sign-up']                    = 'User_Signup/create_user';
+$route['app/signup-thankyou']        = 'User_Signup/show_activation_msg';
+$route['app/activate']               = 'User_Signup/activate';
 $route['app/activate/(:any)/(:any)'] = 'User_Signup/activate/$1/$1';
-$route['app/activation-success'] = 'User_Signup/show_activation_success_msg';
-$route['app/dashboard'] = 'Dashboard/index';
-$route['app/logout'] = 'User_Login/logout';
+$route['app/activation-success']     = 'User_Signup/show_activation_success_msg';
+$route['app/dashboard']              = 'Dashboard/index';
+$route['app/logout']                 = 'User_Login/logout';
 
-$route['app/edit-profile'] = 'Edit_User_Profile/index';
-$route['app/add-income'] = 'Expense_controller/add_income';
-$route['app/new-expense'] = 'Expense_controller/new_expense';
-$route['app/expense-overview'] = 'Expense_controller/expense_overview';
-$route['app/edit-expense/(:num)'] = 'Expense_controller/edit_expense/$1';
+$route['app/edit-profile']           = 'Edit_User_Profile/index';
+$route['app/add-income']             = 'Expense_controller/add_income';
+$route['app/new-expense']            = 'Expense_controller/new_expense';
+$route['app/expense-overview']       = 'Expense_controller/expense_overview';
+$route['app/edit-expense/(:num)']    = 'Expense_controller/edit_expense/$1';
+$route['app/add-budget']             = 'Budget_controller/add_budget';
+$route['app/remind-user-budget-email'] = 'Budget_controller/email_reminder';
 
